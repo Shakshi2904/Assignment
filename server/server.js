@@ -4,7 +4,13 @@ const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
 const app = express();
-app.use(cors({ origin: "*" }));
+const cors = require("cors");
+app.use(cors({
+  origin: "https://assignment-ed9m.vercel.app",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  credentials: true
+}));
+
 const PORT = process.env.PORT || 5000;
 app.get("/api/dashboard-data", async (req, res) => {
     try {
