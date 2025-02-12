@@ -1,13 +1,13 @@
 {
     "build": {
       "env": {
-        "VITE_SERVERURL": "https://your-backend.vercel.app/api/dashboard-data"
+        "VITE_SERVERURL": "https://assignment-brown-sigma.vercel.app"
       }
     },
     "rewrites": [
       {
         "source": "/api/(.*)",
-        "destination": "https://your-backend.vercel.app/api/$1"
+        "destination": "https://assignment-brown-sigma.vercel.app/api/$1"
       }
     ]
   }
