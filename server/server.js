@@ -4,7 +4,6 @@ const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
 const app = express();
-const cors = require("cors");
 app.use(cors({
   origin: "https://assignment-ed9m.vercel.app",
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
