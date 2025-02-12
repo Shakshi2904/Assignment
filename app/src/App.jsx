@@ -16,7 +16,7 @@ function App() {
 
   const fetchData = () => {
     setLoading(true);
-    axios.get(import.meta.env.VITE_SERVERURL)
+    axios.get(import.meta.env.VITE_SERVERURL + "/api/dashboard-data")
       .then((response) => {
         let formattedData = response.data.rawData.map((entry) => ({
           ...entry,
