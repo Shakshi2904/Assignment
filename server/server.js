@@ -8,7 +8,8 @@ app.use(cors({ origin: "*" }));
 const PORT = process.env.PORT || 5000;
 app.get("/api/dashboard-data", async (req, res) => {
     try {
-        const sheetDbUrl = process.env.SHEETURL;
+        const sheetDbUrl = process.env.SHEETURL || "https://sheetdb.io/api/v1/f0kvugsj6sshy";
+
         const response = await axios.get(sheetDbUrl);
         const data = response.data;
 
