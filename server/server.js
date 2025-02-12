@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
@@ -6,7 +8,7 @@ app.use(cors({ origin: "*" }));
 const PORT = process.env.PORT || 5000;
 app.get("/api/dashboard-data", async (req, res) => {
     try {
-        const sheetDbUrl = "https://sheetdb.io/api/v1/f0kvugsj6sshy";
+        const sheetDbUrl = process.env.SHEETURL;
         const response = await axios.get(sheetDbUrl);
         const data = response.data;
 
