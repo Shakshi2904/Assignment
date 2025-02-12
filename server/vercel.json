@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "server.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "/server.js"
+      }
+    ],
+    "env": {
+      "SHEETURL": "https://sheetdb.io/api/v1/f0kvugsj6sshy",
+      "PORT": "5000"
+    }
+  }
+  
